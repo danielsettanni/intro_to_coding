@@ -29,9 +29,9 @@ You can copy each version into a file named `index.html` and open it in your bro
 </html>
 ```
 
-What you just used (the basics)
+## What you just used (the basics)
 
-HTML tags
+### HTML tags
 
 An HTML tag is a label inside angle brackets, like <p> or <div>. Tags tell the browser what something is.
 	•	<p> means “paragraph text”
@@ -40,7 +40,7 @@ An HTML tag is a label inside angle brackets, like <p> or <div>. Tags tell the b
 	•	<title> sets the text you see on the browser tab
 	•	<body> contains what you actually see on the page
 
-Closing tags
+### Closing tags
 
 Most tags must be closed using the </tag> syntax:
 	•	Opening tag: <p>
@@ -48,7 +48,7 @@ Most tags must be closed using the </tag> syntax:
 
 This “open + close” pattern is part of the syntax of HTML.
 
-What “syntax” means here
+### What “syntax” means here
 
 Syntax is the set of rules for how code must be written so the computer can understand it.
 Examples of HTML syntax rules:
@@ -56,7 +56,7 @@ Examples of HTML syntax rules:
 	•	Most tags have a matching closing tag </ >
 	•	Tags are usually nested (one inside another) in a neat structure
 
-Attributes (extra info on tags)
+### Attributes (extra info on tags)
 
 An attribute is extra information inside a tag, like:
 
@@ -64,7 +64,7 @@ An attribute is extra information inside a tag, like:
 
 Here, id="message" is an attribute. It gives that element a name we can find later.
 
-Document structure (what each section does)
+### Document structure (what each section does)
 
 A basic HTML file usually looks like this:
 	•	<!DOCTYPE html>: tells the browser this is HTML
@@ -80,21 +80,22 @@ Example: class="choiceButton" (can be used on multiple buttons)
 
 You’ll use IDs and classes to style things with CSS and to find things with JavaScript.
 
-References (HTML syntax + structure):
+### References (HTML syntax + structure):
 	•	https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML
 	•	https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 
 ⸻
 
-Version 2 — Add inline styles (colors!)
+# Version 2 — Add inline styles (colors!)
 
 In this version, you’ll add inline CSS to:
 	•	change the whole page background color
 	•	change the div box background color
 	•	change the color of the word world
 
-Code (copy into index.html)
+## Code (copy into index.html)
 
+```
 <!DOCTYPE html>
 <html>
   <head>
@@ -109,10 +110,11 @@ Code (copy into index.html)
     </div>
   </body>
 </html>
+```
 
-What you just added (the basics)
+## What you just added (the basics)
 
-What CSS is
+### What CSS is
 
 CSS stands for Cascading Style Sheets. CSS controls how things look, like:
 	•	colors (text color, background color)
@@ -130,7 +132,7 @@ A few quick examples
 	•	Margin (space outside a box): margin: 16px;
 	•	Rounded corners: border-radius: 10px;
 
-Three ways to use CSS
+### Three ways to use CSS
 	1.	Inline CSS (what we used here)
 	•	goes inside the tag using style="..."
 	•	Example: <div style="background-color: white;">
@@ -151,7 +153,7 @@ Three ways to use CSS
 
 
 
-CSS syntax (how it’s written)
+### CSS syntax (how it’s written)
 
 CSS is usually written like this:
 
@@ -167,23 +169,24 @@ p {
   color: black;
 }
 
-Inline CSS is the same property: value; format — it’s just inside quotes.
+### Inline CSS is the same property: value; format — it’s just inside quotes.
 
-References (CSS basics + layout):
+### References (CSS basics + layout):
 	•	https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps
 	•	https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout
 
 ⸻
 
-Version 3 — Add a button + JavaScript (make it interactive!)
+# Version 3 — Add a button + JavaScript (make it interactive!)
 
 Now we’ll add:
 	•	a second <div> with a button
 	•	an id on the button (so JavaScript can find it)
 	•	a small JavaScript program that changes the button text when clicked
 
-Code (copy into index.html)
+## Code (copy into index.html)
 
+```
 <!DOCTYPE html>
 <html>
   <head>
@@ -218,10 +221,11 @@ Code (copy into index.html)
     </script>
   </body>
 </html>
+```
 
-What you just added (the basics)
+## What you just added (the basics)
 
-What JavaScript is
+### What JavaScript is
 
 JavaScript is a real programming language.
 Unlike HTML and CSS (which describe structure and style), JavaScript lets you:
@@ -231,12 +235,12 @@ Unlike HTML and CSS (which describe structure and style), JavaScript lets you:
 	•	make decisions with logic (like if statements)
 	•	build interactive games and apps
 
-JavaScript syntax (very small starter ideas)
+### JavaScript syntax (very small starter ideas)
 
 JavaScript code is made of:
 	•	variables (store information)
 
-const name = "Rowan";
+const name = "Catherine";
 
 
 	•	functions (a block of code that runs when called)
@@ -250,7 +254,7 @@ button.onclick = () => { ... };
 
 
 
-The DOM (super accessible explanation)
+### The DOM (super simple explanation)
 
 The DOM stands for Document Object Model.
 Think of it as the browser’s “map” of your page — every tag becomes an object JavaScript can find and change.
@@ -267,7 +271,7 @@ Then you can change it:
 
 button.textContent = "New text!";
 
-Basic logic (IF statements)
+### Basic logic (IF statements)
 
 JavaScript can make decisions:
 
@@ -279,7 +283,7 @@ if (button.textContent === "Click me") {
 
 That’s how games remember choices and react differently.
 
-References (JavaScript basics + working with the page):
+### References (JavaScript basics + working with the page):
 	•	https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps
 	•	https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 
