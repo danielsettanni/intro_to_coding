@@ -14,7 +14,7 @@ You can copy each version into a in a file (a suggested name is in the heading) 
 
 ## Version 1 — The smallest possible web page
 
-## V1 Code (copy into `session-1/getting_started_v1.html.html`)
+## V1 Code (copy into `session-1/getting_started_v1.html`)
 
 ```html
 <!DOCTYPE html>
@@ -97,7 +97,7 @@ In this version, you’ll add inline CSS to:
   •  change the div box background color
   •  change the color of the word world
 
-## V2 Code (copy into session-1/getting_started_v2.html.html)
+## V2 Code (copy into session-1/getting_started_v2.html)
 
 ```html
 <!DOCTYPE html>
@@ -188,7 +188,7 @@ Now we’ll add:
   •  an id on the button (so JavaScript can find it)
   •  a small JavaScript program that changes the button text when clicked
 
-## V3 Code (copy into session-1/getting_started_v3.html.html)
+## V3 Code (copy into session-1/getting_started_v3.html)
 
 ```html
 <!DOCTYPE html>
