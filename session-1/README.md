@@ -102,14 +102,3 @@ In **Session 2**, students will:
 - Create branching paths without copying lots of code
 
 For now, if the buttons work and the story changes — **you did it!** 🎉
-
-
-⸻
-
-If you’d like next, I can also:
-	•	Write Session 2–5 READMEs in the same style
-	•	Add a short parent-only note section
-	•	Create a printable PDF version
-	•	Include screenshots or diagrams for younger students
-
-Just tell me how far you want to take it.
