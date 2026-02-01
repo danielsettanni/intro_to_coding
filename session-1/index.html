@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- The <head> has information ABOUT the page (not the visible story text). -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- The text that appears in the browser tab -->
+    <title>Choose Your Own Adventure</title>
+
+    <!-- Connect our CSS file so we can make it look nicer -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- A "container" div keeps our game area organized -->
+    <div id="game">
+      <!-- Big heading -->
+      <h1>Choose Your Own Adventure</h1>
+
+      <!-- This <p> is where our story text will appear -->
+      <!-- The id="storyText" lets JavaScript find this element later -->
+      <p id="storyText">
+        You are walking home as the sun begins to set. The road splits into two
+        paths. One looks dark and quiet. The other is bright and full of strange sounds.
+      </p>
+
+      <!-- Optional: show the last choice the player clicked -->
+      <p id="statusText" class="status">
+        Make a choice to begin...
+      </p>
+
+      <!-- Buttons go here -->
+      <div id="choices">
+        <!-- Each button has an id so JavaScript can attach click behavior -->
+        <button id="choiceDark">Take the dark path</button>
+        <button id="choiceBright">Take the bright path</button>
+      </div>
+    </div>
+
+    <!-- Load our JavaScript at the END so the page loads first -->
+    <script src="script.js"></script>
+  </body>
+</html>

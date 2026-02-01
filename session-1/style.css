@@ -1,0 +1,54 @@
+/* CSS makes the page look nicer. It does NOT change the story logic. */
+
+body {
+    /* A readable font */
+    font-family: Arial, sans-serif;
+  
+    /* Light background */
+    background: #f2f2f2;
+  
+    /* Center the game box */
+    display: flex;
+    justify-content: center;
+  
+    /* Give it breathing room at the top */
+    padding-top: 40px;
+  }
+  
+  /* The main white "card" holding our story */
+  #game {
+    background: white;
+    width: 520px;
+    padding: 20px 24px;
+    border-radius: 10px;
+  
+    /* Subtle shadow makes it feel like a card */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  }
+  
+  #storyText {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  
+  /* The smaller status line under the story */
+  .status {
+    margin-top: 12px;
+    font-style: italic;
+    opacity: 0.8;
+  }
+  
+  /* Stack buttons vertically with a little spacing */
+  #choices {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Make buttons big and easy to click */
+  button {
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+  }
