@@ -35,19 +35,19 @@ You can copy each version into a file named `index.html` and open it in your bro
 
 ### HTML tags
 
-An HTML tag is a label inside angle brackets, like &ltp&gt or &ltdiv&gt. Tags tell the browser what something is.
+An HTML tag is a label inside angle brackets, like &lt;p&gt; or &lt;div&gt;. Tags tell the browser what something is.
 
-  •  &ltp&gt means “paragraph text”
-  •  &ltdiv&gt means “a box/container to group stuff”
-  •  &lthead&gt holds page info (not usually shown on the page)
-  •  &lttitle&gt sets the text you see on the browser tab
-  •  &ltbody&gt contains what you actually see on the page
+  •  &lt;p&gt; means “paragraph text”
+  •  &lt;div&gt; means “a box/container to group stuff”
+  •  &lt;head&gt; holds page info (not usually shown on the page)
+  •  &lt;title&gt; sets the text you see on the browser tab
+  •  &lt;body&gt; contains what you actually see on the page
 
 ### Closing tags
 
-Most tags must be closed using the &lt/tag&gt syntax:
-  •  Opening tag: &ltp&gt
-  •  Closing tag: &lt/p&gt
+Most tags must be closed using the &lt;/tag&gt; syntax:
+  •  Opening tag: &lt;p&gt;
+  •  Closing tag: &lt;/p&gt;
 
 This “open + close” pattern is part of the syntax of HTML.
 
@@ -55,25 +55,25 @@ This “open + close” pattern is part of the syntax of HTML.
 
 Syntax is the set of rules for how code must be written so the computer can understand it.
 Examples of HTML syntax rules:
-  •  Tags use &lt &gt
-  •  Most tags have a matching closing tag &lt/ &gt
+  •  Tags use &lt; &gt;
+  •  Most tags have a matching closing tag &lt;/ &gt;
   •  Tags are usually nested (one inside another) in a neat structure
 
 ### Attributes (extra info on tags)
 
 An attribute is extra information inside a tag, like:
 
-&ltp id="message"&gtHello world&lt/p&gt
+&lt;p id="message"&gt;Hello world&lt;/p&gt;
 
 Here, id="message" is an attribute. It gives that element a name we can find later.
 
 ### Document structure (what each section does)
 
 A basic HTML file usually looks like this:
-  •  &lt!DOCTYPE html&gt: tells the browser this is HTML
-  •  &lthtml&gt: wraps the whole page
-  •  &lthead&gt: information about the page (like the &lttitle&gt)
-  •  &ltbody&gt: everything visible on the page
+  •  &lt;!DOCTYPE html&gt;: tells the browser this is HTML
+  •  &lt;html&gt;: wraps the whole page
+  •  &lt;head&gt;: information about the page (like the &lt;title&gt;)
+  •  &lt;body&gt;: everything visible on the page
 
 IDs and classes (you’ll use these a lot)
   •  ID: a unique name for ONE element on the page
@@ -140,20 +140,20 @@ A few quick examples
 
   1. Inline CSS (what we used here)
   •  goes inside the tag using style="..."
-  •  Example: &ltdiv style="background-color: white;"&gt
-  1. Embedded CSS (in a &ltstyle&gt tag inside &lthead&gt)
+  •  Example: &lt;div style="background-color: white;"&gt;
+  1. Embedded CSS (in a &lt;style&gt; tag inside &lt;head&gt;)
   •  good for small pages
   •  Example:
 
-&ltstyle&gt
+&lt;style&gt;
   body { background-color: #e9f5ff; }
-&lt/style&gt
+&lt;/style&gt;
 
   1. External CSS (in a separate .css file)
   •  best for bigger projects
   •  Example:
 
-&ltlink rel="stylesheet" href="style.css"&gt
+&lt;link rel="stylesheet" href="style.css"&gt;
 
 ### CSS syntax (how it’s written)
 
@@ -184,7 +184,7 @@ p {
 
 Now we’ll add:
 
-  •  a second &ltdiv&gt with a button
+  •  a second &lt;div&gt; with a button
   •  an id on the button (so JavaScript can find it)
   •  a small JavaScript program that changes the button text when clicked
 
