@@ -1,4 +1,5 @@
 # Intro to Coding
+
 ## Choose Your Own Adventure
 
 This repository contains a beginner-friendly **Choose Your Own Adventure** game built with **HTML, CSS, and JavaScript**.
@@ -10,6 +11,7 @@ The project is part of *Intro to Coding*, a class where students learn the basic
 ## 🎮 What This Project Is
 
 Students build a web-based interactive story where:
+
 - The player reads story text
 - The player makes choices by clicking buttons
 - The story changes based on those choices
@@ -22,6 +24,7 @@ The project is taught over **5 sessions**, with a working, playable version at t
 ## 🧠 What Students Learn
 
 Through this project, students learn:
+
 - Basic **HTML** for structure
 - Basic **CSS** for styling and layout
 - Basic **JavaScript** for interactivity
@@ -30,6 +33,7 @@ Through this project, students learn:
 - How to debug and test their own work
 
 ---
+
 ## 🆘 Getting Help (Trusted Learning Resources)
 
 **Important Note for Students:**  
@@ -44,12 +48,14 @@ The websites below are run by **public, non-profit organizations** or long-stand
 ### 🌐 HTML (Structure of Web Pages)
 
 **MDN Web Docs (Mozilla)**
-- https://developer.mozilla.org
+
+- [https://developer.mozilla.org](https://developer.mozilla.org)
 - Run by Mozilla, a non-profit organization
 - Clear explanations and examples
 - Used by students, teachers, and professionals
 
 Recommended starting points:
+
 - HTML Basics
 - Elements and tags
 - Links, images, and buttons
@@ -59,11 +65,13 @@ Recommended starting points:
 ### 🎨 CSS (Styling and Layout)
 
 **MDN Web Docs (Mozilla)**
-- https://developer.mozilla.org
+
+- [https://developer.mozilla.org](https://developer.mozilla.org)
 - Great explanations of colors, fonts, spacing, and layout
 - Examples you can copy and experiment with
 
 Recommended topics:
+
 - CSS basics
 - Colors and fonts
 - Flexbox (used for layouts in this project)
@@ -73,11 +81,13 @@ Recommended topics:
 ### ⚙️ JavaScript (Making Pages Interactive)
 
 **MDN Web Docs (Mozilla)**
-- https://developer.mozilla.org
+
+- [https://developer.mozilla.org](https://developer.mozilla.org)
 - Excellent reference for JavaScript basics
 - Explains how buttons, events, and variables work
 
 Recommended topics:
+
 - Variables
 - Functions
 - Events (like button clicks)
@@ -88,13 +98,15 @@ Recommended topics:
 ### 📘 Beginner-Friendly Courses and References
 
 **freeCodeCamp**
-- https://www.freecodecamp.org
+
+- [https://www.freecodecamp.org](https://www.freecodecamp.org)
 - Non-profit organization
 - Interactive lessons for HTML, CSS, and JavaScript
 - Great for extra practice outside of class
 
 **W3Schools**
-- https://www.w3schools.com
+
+- [https://www.w3schools.com](https://www.w3schools.com)
 - Easy-to-read tutorials and examples
 - Good for quick explanations and trying things out
 
@@ -138,6 +150,7 @@ session-5/
 Each folder contains a complete, working version of the game as it exists at the end of that session.
 
 ### Session Overview
+
 - **Session 1:** Basic interactive story (text + buttons)
 - **Session 2:** Story engine with branching pages
 - **Session 3:** Game state, inventory, and conditional choices
@@ -163,11 +176,13 @@ assets/       # Images and sounds (optional)
 ## ▶️ How to Run the Game
 
 ### Option 1: Using Live Server (Recommended)
+
 1. Open a session folder in **VS Code**
 2. Right-click `index.html`
 3. Select **“Open with Live Server”**
 
 ### Option 2: Open in a Browser
+
 - Double-click `index.html` to open it in any modern web browser
 
 ---
@@ -177,11 +192,13 @@ assets/       # Images and sounds (optional)
 Most story changes happen in **`story.js`**.
 
 To add a new story page:
+
 - Give it a unique name
 - Write the story text
 - Add choices that point to other pages
 
 Example:
+
 ```js
 forest: {
   text: "The forest is quiet and foggy.",

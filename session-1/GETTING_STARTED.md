@@ -1,4 +1,5 @@
 # GETTING_STARTED.md  
+
 ## Your First Web Page (3 Tiny Versions)
 
 In this project, you’ll build a *super simple* webpage three times. Each version adds one new idea:
@@ -11,9 +12,10 @@ You can copy each version into a file named `index.html` and open it in your bro
 
 ---
 
-# Version 1 — The smallest possible web page
+## Version 1 — The smallest possible web page
 
-## Code (copy into `index.html`)
+## V1 Code (copy into `index.html`)
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -34,17 +36,18 @@ You can copy each version into a file named `index.html` and open it in your bro
 ### HTML tags
 
 An HTML tag is a label inside angle brackets, like <p> or <div>. Tags tell the browser what something is.
-	•	<p> means “paragraph text”
-	•	<div> means “a box/container to group stuff”
-	•	<head> holds page info (not usually shown on the page)
-	•	<title> sets the text you see on the browser tab
-	•	<body> contains what you actually see on the page
+
+  •  <p> means “paragraph text”
+  •  <div> means “a box/container to group stuff”
+  •  <head> holds page info (not usually shown on the page)
+  •  <title> sets the text you see on the browser tab
+  •  <body> contains what you actually see on the page
 
 ### Closing tags
 
 Most tags must be closed using the </tag> syntax:
-	•	Opening tag: <p>
-	•	Closing tag: </p>
+  •  Opening tag: <p>
+  •  Closing tag: </p>
 
 This “open + close” pattern is part of the syntax of HTML.
 
@@ -52,9 +55,9 @@ This “open + close” pattern is part of the syntax of HTML.
 
 Syntax is the set of rules for how code must be written so the computer can understand it.
 Examples of HTML syntax rules:
-	•	Tags use < >
-	•	Most tags have a matching closing tag </ >
-	•	Tags are usually nested (one inside another) in a neat structure
+  •  Tags use < >
+  •  Most tags have a matching closing tag </ >
+  •  Tags are usually nested (one inside another) in a neat structure
 
 ### Attributes (extra info on tags)
 
@@ -67,35 +70,36 @@ Here, id="message" is an attribute. It gives that element a name we can find lat
 ### Document structure (what each section does)
 
 A basic HTML file usually looks like this:
-	•	<!DOCTYPE html>: tells the browser this is HTML
-	•	<html>: wraps the whole page
-	•	<head>: information about the page (like the <title>)
-	•	<body>: everything visible on the page
+  •  <!DOCTYPE html>: tells the browser this is HTML
+  •  <html>: wraps the whole page
+  •  <head>: information about the page (like the <title>)
+  •  <body>: everything visible on the page
 
 IDs and classes (you’ll use these a lot)
-	•	ID: a unique name for ONE element on the page
+  •  ID: a unique name for ONE element on the page
 Example: id="startButton" (should be used once)
-	•	Class: a reusable label for MANY elements
+  •  Class: a reusable label for MANY elements
 Example: class="choiceButton" (can be used on multiple buttons)
 
 You’ll use IDs and classes to style things with CSS and to find things with JavaScript.
 
-### References (HTML syntax + structure):
-	•	https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML
-	•	https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure
+### References (HTML syntax + structure)
+
+  •  [Introduction to HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML)
+  •  [Document and website structure](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
 
 ⸻
 
-# Version 2 — Add inline styles (colors!)
+## Version 2 — Add inline styles (colors!)
 
 In this version, you’ll add inline CSS to:
-	•	change the whole page background color
-	•	change the div box background color
-	•	change the color of the word world
+  •  change the whole page background color
+  •  change the div box background color
+  •  change the color of the word world
 
-## Code (copy into index.html)
+## V2 Code (copy into index.html)
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -117,41 +121,39 @@ In this version, you’ll add inline CSS to:
 ### What CSS is
 
 CSS stands for Cascading Style Sheets. CSS controls how things look, like:
-	•	colors (text color, background color)
-	•	size (font size, width/height)
-	•	layout (how things are arranged)
-	•	spacing (padding and margin)
-	•	borders (border thickness, rounded corners)
+  •  colors (text color, background color)
+  •  size (font size, width/height)
+  •  layout (how things are arranged)
+  •  spacing (padding and margin)
+  •  borders (border thickness, rounded corners)
 
 A few quick examples
-	•	Color: color: red;
-	•	Background color: background-color: lightblue;
-	•	Font size: font-size: 18px;
-	•	Layout (simple): display: flex;
-	•	Padding (space inside a box): padding: 16px;
-	•	Margin (space outside a box): margin: 16px;
-	•	Rounded corners: border-radius: 10px;
+  •  Color: color: red;
+  •  Background color: background-color: lightblue;
+  •  Font size: font-size: 18px;
+  •  Layout (simple): display: flex;
+  •  Padding (space inside a box): padding: 16px;
+  •  Margin (space outside a box): margin: 16px;
+  •  Rounded corners: border-radius: 10px;
 
 ### Three ways to use CSS
-	1.	Inline CSS (what we used here)
-	•	goes inside the tag using style="..."
-	•	Example: <div style="background-color: white;">
-	2.	Embedded CSS (in a <style> tag inside <head>)
-	•	good for small pages
-	•	Example:
+
+  1. Inline CSS (what we used here)
+  •  goes inside the tag using style="..."
+  •  Example: <div style="background-color: white;">
+  1. Embedded CSS (in a <style> tag inside <head>)
+  •  good for small pages
+  •  Example:
 
 <style>
   body { background-color: #e9f5ff; }
 </style>
 
-
-	3.	External CSS (in a separate .css file)
-	•	best for bigger projects
-	•	Example:
+  1. External CSS (in a separate .css file)
+  •  best for bigger projects
+  •  Example:
 
 <link rel="stylesheet" href="style.css">
-
-
 
 ### CSS syntax (how it’s written)
 
@@ -169,24 +171,26 @@ p {
   color: black;
 }
 
-### Inline CSS is the same property: value; format — it’s just inside quotes.
+### Inline CSS is the same property: value; format — it’s just inside quotes
 
-### References (CSS basics + layout):
-	•	https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps
-	•	https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout
+### References (CSS basics + layout)
+
+  •  [CSS First Steps](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps)
+  •  [CSS Layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout)
 
 ⸻
 
-# Version 3 — Add a button + JavaScript (make it interactive!)
+## Version 3 — Add a button + JavaScript (make it interactive!)
 
 Now we’ll add:
-	•	a second <div> with a button
-	•	an id on the button (so JavaScript can find it)
-	•	a small JavaScript program that changes the button text when clicked
 
-## Code (copy into index.html)
+  •  a second <div> with a button
+  •  an id on the button (so JavaScript can find it)
+  •  a small JavaScript program that changes the button text when clicked
 
-```
+## V3 Code (copy into index.html)
+
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -223,36 +227,32 @@ Now we’ll add:
 </html>
 ```
 
-## What you just added (the basics)
+## What you just added (the JavaScript basics)
 
 ### What JavaScript is
 
 JavaScript is a real programming language.
 Unlike HTML and CSS (which describe structure and style), JavaScript lets you:
-	•	react to user actions (like clicks)
-	•	change text, images, styles, and more
-	•	store data in variables
-	•	make decisions with logic (like if statements)
-	•	build interactive games and apps
+  •  react to user actions (like clicks)
+  •  change text, images, styles, and more
+  •  store data in variables
+  •  make decisions with logic (like if statements)
+  •  build interactive games and apps
 
 ### JavaScript syntax (very small starter ideas)
 
 JavaScript code is made of:
-	•	variables (store information)
+  •  variables (store information)
 
 const name = "Catherine";
 
-
-	•	functions (a block of code that runs when called)
+  •  functions (a block of code that runs when called)
 
 function sayHi() { alert("Hi!"); }
 
-
-	•	events (like click, keypress, etc.)
+  •  events (like click, keypress, etc.)
 
 button.onclick = () => { ... };
-
-
 
 ### The DOM (super simple explanation)
 
@@ -283,9 +283,10 @@ if (button.textContent === "Click me") {
 
 That’s how games remember choices and react differently.
 
-### References (JavaScript basics + working with the page):
-	•	https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps
-	•	https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
+### References (JavaScript basics + working with the page)
+
+  •  [JavaScript First Steps](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps)
+  •  [JavaScript Manipulating Documents](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
 
 ⸻
 

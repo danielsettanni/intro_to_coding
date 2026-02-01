@@ -1,4 +1,5 @@
 # Intro to Coding  
+
 ## Session 1 — Your First Interactive Story
 
 Welcome to **Session 1** of *Intro to Coding*!
@@ -12,6 +13,7 @@ No prior coding experience is needed.
 ## 🎯 What Students Will Do in Session 1
 
 In this session, students will:
+
 - Create a simple webpage using **HTML**
 - Add basic styling with **CSS**
 - Use **JavaScript** to respond to button clicks
@@ -37,15 +39,18 @@ Each file has a different role, and students will learn how they work together.
 ## ▶️ How to Run the Project
 
 ### Option 1: Using VS Code (Recommended)
+
 1. Open this `session-1` folder in **Visual Studio Code**
 2. Right-click `index.html`
 3. Choose **“Open with Live Server”**
 
 ### Option 2: Using a Web Browser
+
 - Double-click `index.html` to open it in a browser  
 (Chrome, Edge, Firefox, or Safari all work)
 
 Once it’s open:
+
 - Click the buttons
 - Watch the story change
 - You’ve built an interactive program!
@@ -55,6 +60,7 @@ Once it’s open:
 ## ✍️ What Students Can Customize
 
 Students are encouraged to:
+
 - Change the story text
 - Rename the buttons
 - Write their own opening scene
@@ -67,6 +73,7 @@ There are no “wrong” stories — creativity is part of the learning.
 ## 🧠 Big Ideas from Session 1
 
 This session introduces:
+
 - **HTML** → structure (what’s on the page)
 - **CSS** → style (how it looks)
 - **JavaScript** → behavior (what happens when you click)
@@ -80,11 +87,13 @@ Students learn that code can control a story, not just numbers.
 It’s normal to get stuck while learning to code — even professionals do!
 
 If something doesn’t work:
+
 - Check spelling and punctuation
 - Make sure file names match exactly
 - Ask for help during class
 
 For extra learning, we recommend trusted, beginner-friendly resources like:
+
 - MDN Web Docs (Mozilla)
 - freeCodeCamp
 - W3Schools
@@ -97,6 +106,7 @@ For extra learning, we recommend trusted, beginner-friendly resources like:
 ## 🚀 What’s Next?
 
 In **Session 2**, students will:
+
 - Build a story engine
 - Add multiple story pages
 - Create branching paths without copying lots of code
