@@ -30,6 +30,99 @@ Through this project, students learn:
 - How to debug and test their own work
 
 ---
+## 🆘 Getting Help (Trusted Learning Resources)
+
+**Important Note for Students:**  
+When using any websites or online resources, always follow your family’s rules and expectations for internet use. If you’re ever unsure whether a site is okay to use, please check with a parent or guardian first. Learning to code should always be safe, comfortable, and respectful of your household’s guidelines.
+
+Learning to code means looking things up — **everyone does it**, including professional developers. When you need help, it’s important to use **reliable, beginner-friendly resources**.
+
+The websites below are run by **public, non-profit organizations** or long-standing educational groups and are safe, accurate, and free.
+
+---
+
+### 🌐 HTML (Structure of Web Pages)
+
+**MDN Web Docs (Mozilla)**
+- https://developer.mozilla.org
+- Run by Mozilla, a non-profit organization
+- Clear explanations and examples
+- Used by students, teachers, and professionals
+
+Recommended starting points:
+- HTML Basics
+- Elements and tags
+- Links, images, and buttons
+
+---
+
+### 🎨 CSS (Styling and Layout)
+
+**MDN Web Docs (Mozilla)**
+- https://developer.mozilla.org
+- Great explanations of colors, fonts, spacing, and layout
+- Examples you can copy and experiment with
+
+Recommended topics:
+- CSS basics
+- Colors and fonts
+- Flexbox (used for layouts in this project)
+
+---
+
+### ⚙️ JavaScript (Making Pages Interactive)
+
+**MDN Web Docs (Mozilla)**
+- https://developer.mozilla.org
+- Excellent reference for JavaScript basics
+- Explains how buttons, events, and variables work
+
+Recommended topics:
+- Variables
+- Functions
+- Events (like button clicks)
+- Arrays and objects
+
+---
+
+### 📘 Beginner-Friendly Courses and References
+
+**freeCodeCamp**
+- https://www.freecodecamp.org
+- Non-profit organization
+- Interactive lessons for HTML, CSS, and JavaScript
+- Great for extra practice outside of class
+
+**W3Schools**
+- https://www.w3schools.com
+- Easy-to-read tutorials and examples
+- Good for quick explanations and trying things out
+
+---
+
+### ✅ Tips for Getting Help Successfully
+
+- Search for **one small question at a time**
+- Read examples and try them in your own code
+- If something doesn’t work, check:
+  - spelling
+  - punctuation
+  - matching `{ }`, `( )`, and quotes
+- It’s okay to ask for help — learning to debug is part of coding!
+
+---
+
+### 🚫 What to Avoid
+
+- Copying large blocks of code without understanding them
+- Random blogs or videos that don’t explain *why* something works
+- Feeling stuck and giving up — ask for help instead!
+
+---
+
+Learning to code is a journey. These resources are here to help you learn safely, clearly, and confidently.
+
+---
 
 ## 📚 Course Structure (5 Sessions)
 
