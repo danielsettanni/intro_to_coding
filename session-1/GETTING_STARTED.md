@@ -25,7 +25,7 @@ You can copy each version into a file named `index.html` and open it in your bro
 
   <body>
     <div>
-      <p>Hello world</p>
+      <p>Hello World!</p>
     </div>
   </body>
 </html>
@@ -63,7 +63,7 @@ Examples of HTML syntax rules:
 
 An attribute is extra information inside a tag, like:
 
-&lt;p id="message"&gt;Hello world&lt;/p&gt;
+&lt;p id="message"&gt;Hello World!&lt;/p&gt;
 
 Here, id="message" is an attribute. It gives that element a name we can find later.
 
@@ -109,7 +109,7 @@ In this version, you’ll add inline CSS to:
   <body style="background-color: #e9f5ff;">
     <div style="background-color: #ffffff; padding: 16px; border-radius: 10px;">
       <p>
-        Hello <span style="color: #d13b3b;">world</span>
+        Hello <span style="color: #d13b3b;">World!</span>
       </p>
     </div>
   </body>
@@ -200,7 +200,7 @@ Now we’ll add:
   <body style="background-color: #e9f5ff; font-family: Arial, sans-serif;">
     <div style="background-color: #ffffff; padding: 16px; border-radius: 10px;">
       <p style="font-size: 18px;">
-        Hello <span style="color: #d13b3b;">world</span>
+        Hello <span style="color: #d13b3b;">World!</span>
       </p>
     </div>
 
