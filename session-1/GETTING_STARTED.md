@@ -220,7 +220,7 @@ Now we’ll add:
 
       // 2) When the button is clicked, run this code:
       button.onclick = () => {
-        button.textContent = "Nice click! You just bossed the browser around 😄";
+        button.textContent = "Nice click!";
       };
     </script>
   </body>
