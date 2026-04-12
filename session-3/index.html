@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choose Your Own Adventure (Session 3)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="game">
+      <h1 id="title">Lost in the Forest</h1>
+
+      <!-- Story text -->
+      <p id="storyText"></p>
+
+      <!-- Inventory display (new in Session 3) -->
+      <div id="inventoryBox">
+        <strong>Inventory:</strong>
+        <span id="inventoryText">none</span>
+      </div>
+
+      <!-- Choice buttons get generated here -->
+      <div id="choices"></div>
+
+      <!-- Debug / status line -->
+      <p id="statusText" class="status"></p>
+    </div>
+
+    <script src="story.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

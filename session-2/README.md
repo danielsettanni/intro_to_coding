@@ -1,4 +1,5 @@
 # Intro to Coding
+
 ## Session 2 — Build a Story Engine (Branching Adventure)
 
 Welcome to **Session 2** of *Intro to Coding*!
