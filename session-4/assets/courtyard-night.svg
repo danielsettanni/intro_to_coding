@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#3f0d12"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#sky)"/>
+  <rect y="500" width="1280" height="220" fill="#374151"/>
+  <rect x="540" y="230" width="200" height="320" fill="#1f2937"/>
+  <circle cx="640" cy="390" r="26" fill="#fca5a5"/>
+  <text x="60" y="660" fill="#fee2e2" font-size="64" font-family="Arial">Courtyard at Night</text>
+</svg>

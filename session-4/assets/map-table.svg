@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#1e293b"/>
+  <rect x="120" y="110" width="1040" height="500" rx="20" fill="#fef3c7"/>
+  <path d="M180 500 C300 420, 420 560, 540 480 C670 400, 780 520, 930 440" stroke="#7c2d12" stroke-width="12" fill="none"/>
+  <text x="60" y="660" fill="#f8fafc" font-size="64" font-family="Arial">Dusty Map</text>
+</svg>

@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 32px 16px;
+  transition: background 0.4s ease;
+}
+
+#game {
+  width: 640px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+#title {
+  margin-top: 0;
+}
+
+#sceneImage {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+#storyText {
+  margin-top: 14px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+#choices {
+  margin-top: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.status {
+  margin-top: 12px;
+  font-style: italic;
+  opacity: 0.85;
+}
+
+body.calm {
+  background: linear-gradient(135deg, #dbeafe, #f0f9ff);
+}
+
+body.mystery {
+  background: linear-gradient(135deg, #111827, #312e81);
+}
+
+body.danger {
+  background: linear-gradient(135deg, #3f0d12, #a71d31);
+}
+
+body.calm button {
+  background: #0ea5e9;
+  color: white;
+}
+
+body.mystery button {
+  background: #7c3aed;
+  color: white;
+}
+
+body.danger button {
+  background: #ef4444;
+  color: white;
+}

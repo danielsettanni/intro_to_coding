@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#111827"/>
+  <polygon points="0,720 1280,720 840,260 440,260" fill="#1f2937"/>
+  <rect x="170" y="200" width="180" height="230" fill="#374151"/>
+  <rect x="930" y="200" width="180" height="230" fill="#374151"/>
+  <text x="60" y="660" fill="#f3f4f6" font-size="64" font-family="Arial">Portrait Hallway</text>
+</svg>
