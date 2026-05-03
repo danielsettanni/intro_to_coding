@@ -29,7 +29,20 @@ Keeps Session 4 separate and organized.
 
 2. Open that folder in **VS Code**
 
-3. (Optional but recommended) Create an `assets` folder for images.
+3. Download the prepared assets zip:
+
+   - Relative link: [`assets.zip`](./assets.zip)
+   - Direct URL: `https://github.com/danielsettanni/intro_to_coding/blob/main/session-4/assets.zip`
+
+4. Unzip `assets.zip` inside your `session-4` folder.
+
+   The zip already includes an `assets/` directory.
+
+5. Confirm you now have files like:
+
+   - `assets/tower-room.svg`
+   - `assets/hallway.svg`
+   - `assets/portrait-secret.svg`
 
 ---
 
