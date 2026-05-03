@@ -62,15 +62,30 @@ Optional:
 
 Place your images in an `assets` folder inside `session-4`, for example:
 
-- `assets/tower-room.jpg`
-- `assets/hallway.jpg`
-- `assets/courtyard-night.jpg`
-- `assets/gate.jpg`
+- `assets/tower-room.svg`
+- `assets/hallway.svg`
+- `assets/courtyard-night.svg`
+- `assets/gate-open.svg`
 
 Each story node can define:
 
 - `image` → path to the scene image
 - `mood` → visual theme class (example: `calm`, `danger`, `mystery`)
+
+---
+
+## 🧩 What Is an SVG? (Basic)
+
+An **SVG** is an image format based on text instructions (shapes, lines, colors), not a fixed pixel grid.
+
+- **SVG** = vector image (text-based instructions)
+- **PNG/JPG** = raster image (pixels stored as binary image data)
+
+Simple difference:
+- SVG stays sharp when resized
+- PNG/JPG can get blurry or pixelated when stretched
+
+For this session, SVG files are useful as lightweight, editable placeholder scene art.
 
 ---
 
@@ -87,7 +102,7 @@ Example node fields:
 ```js
 start: {
   text: "Moonlight spills across the tower floor...",
-  image: "assets/tower-room.jpg",
+  image: "assets/tower-room.svg",
   mood: "mystery",
   choices: [
     { text: "Light the lantern", target: "lantern" }
@@ -95,7 +110,7 @@ start: {
 }
 ```
 
-✅ Tip: Keep image names simple and consistent (`lowercase-with-dashes.jpg`) to avoid path errors.
+✅ Tip: Keep image names simple and consistent (`lowercase-with-dashes.svg`) to avoid path errors.
 
 ---
 
@@ -114,7 +129,7 @@ This session introduces:
 
 If something doesn’t work, check:
 
-- Image paths are correct (example: `assets/hallway.jpg`)
+- Image paths are correct (example: `assets/hallway.svg`)
 - File names and capitalization match exactly
 - You saved files and refreshed the browser
 - `story.js` node names and choice `target` values match exactly

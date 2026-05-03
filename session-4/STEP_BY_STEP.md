@@ -451,6 +451,36 @@ goToNode("start");
 
 ---
 
+## 🎨 Step 5 — Make a Tiny SVG Change (Color Edit)
+
+**What this does for you:**  
+Shows that SVG files are editable text and your art can change instantly.
+
+1. Open this file:
+
+   `assets/tower-room.svg`
+
+2. Find the circle color line (it may look like this):
+
+```xml
+<circle cx="1030" cy="130" r="70" fill="#c7d2fe" opacity="0.75"/>
+```
+
+3. Change the `fill` color to something else, for example:
+
+```xml
+<circle cx="1030" cy="130" r="70" fill="#fbbf24" opacity="0.75"/>
+```
+
+4. Save and refresh the browser.
+
+✅ You should see:  
+The moon/light color in that scene changes.
+
+Tip: Try a few hex colors to experiment with atmosphere.
+
+---
+
 ## 🚀 Next Steps
 
 - Experiment with your own story, images, and styles.
