@@ -9,10 +9,12 @@ In **Session 5**, you’ll finish your project by adding:
 - Ending + replay logic
 - Publishing steps so you can safely share your game
 
-You’ll create **4 files** in this session:
+You’ll create **6 files** in this session:
 - `index.html`
 - `style.css`
 - `story.js`
+- `items.json`
+- `adversaries.json`
 - `script.js`
 
 After each step, run your game and test one thing.
@@ -194,46 +196,151 @@ button:hover {
 ## 📖 Step 3 — Create `story.js`
 
 **What this does for you:**  
-Adds three full routes, store trading, and battle nodes.
+Adds the full story nodes, routes, requirements, and battle/story flow.
 
-Use the same `story.js` from this session folder:
-
-- Start in village
-- Prepare by collecting items
-- Trade at store (`apples` → `gift basket`)
-- Pick one of three paths
-- Fight at least one enemy per path
-- Reach Grandma only if you brought the basket
+Use the same `story.js` from this session folder.
 
 ✅ Test quickly:
-- Can you reach the store?
-- Can you trade apples for basket?
-- Can you enter a path?
+- Can you move from start to village?
+- Do route requirements redirect correctly when missing?
 
 ---
 
-## ⚙️ Step 4 — Create `script.js`
+## 🧱 Step 4 — Create `items.json`
 
 **What this does for you:**  
-Runs the game engine with:
+Defines all possible items and metadata the engine uses for inventory messaging and ownership checks.
+
+Create a file named:
+
+`items.json`
+
+Paste this:
+
+```json
+{
+  "lantern": {
+    "category": "general",
+    "description": "a sturdy lantern",
+    "owned": false
+  },
+  "apples": {
+    "category": "general",
+    "description": "a basket of ripe apples",
+    "owned": false
+  },
+  "gift basket": {
+    "category": "general",
+    "description": "Grandma's gift basket",
+    "owned": false
+  },
+  "rope": {
+    "category": "general",
+    "description": "a sturdy rope",
+    "owned": false
+  },
+  "climbing pick": {
+    "category": "general",
+    "description": "a climbing pick",
+    "owned": false
+  },
+  "sword": {
+    "category": "weapon",
+    "description": "a sword (attack x2)",
+    "owned": false
+  },
+  "bow": {
+    "category": "weapon",
+    "description": "a bow (attack x2)",
+    "owned": false
+  },
+  "simple armor": {
+    "category": "armor",
+    "description": "simple armor (defense x1.5)",
+    "owned": false
+  },
+  "chain armor": {
+    "category": "armor",
+    "description": "chain armor (defense x2)",
+    "owned": false
+  }
+}
+```
+
+✅ Test quickly:
+- App still loads (no JSON syntax error in browser console).
+
+---
+
+## 👾 Step 5 — Create `adversaries.json`
+
+**What this does for you:**  
+Provides enemy pools for mine encounters (weak/average/strong), including rewards and backstory.
+
+Create a file named:
+
+`adversaries.json`
+
+Paste this:
+
+```json
+{
+  "weak": [
+    {
+      "name": "Cave Rat Pack Leader",
+      "hitPoints": 12,
+      "backstory": "A hungry tunnel scavenger that guards shiny scraps.",
+      "strengthClassification": "weak",
+      "rewardRupeesRange": [10, 20]
+    }
+  ],
+  "average": [
+    {
+      "name": "Ironcap Brigand",
+      "hitPoints": 20,
+      "backstory": "A seasoned outlaw who controls old side tunnels.",
+      "strengthClassification": "average",
+      "rewardRupeesRange": [15, 25]
+    }
+  ],
+  "strong": [
+    {
+      "name": "Obsidian Brute",
+      "hitPoints": 28,
+      "backstory": "A hulking cave warrior clad in obsidian shards.",
+      "strengthClassification": "strong",
+      "rewardRupeesRange": [20, 35]
+    }
+  ]
+}
+```
+
+✅ Test quickly:
+- Mine encounter can show enemy name/classification and backstory.
+
+---
+
+## ⚙️ Step 6 — Create `script.js`
+
+**What this does for you:**  
+Runs the engine with:
 - state
 - inventory categories
 - HP and battle rolls
 - weapon/armor multipliers
 - defeat/retreat flow
 - persistent defeated enemies
+- JSON data loading (`items.json` + `adversaries.json`)
 
 Use the same `script.js` from this session folder.
 
 ✅ Test quickly:
-- Equip sword or bow and check Attack badge changes
-- Equip simple/chain armor and check Defense badge changes
-- Start a battle and test attack + retreat
-- Lose all HP once and confirm wake-up at home
+- No startup errors in console
+- Mine + battles + store/blacksmith logic works
 
 ---
 
-## ✅ Step 5 — Endings + Replay Test
+## ✅ Step 7 — Endings + Replay Test
 
 1. Make sure each route can reach `grandmaHouse`.
 2. Make sure `gift basket` is required.
@@ -245,7 +352,7 @@ Use the same `script.js` from this session folder.
 
 ---
 
-## 🌍 Step 6 — Publishing (Safe + Free)
+## 🌍 Step 8 — Publishing (Safe + Free)
 
 **Do this with a parent/guardian or teacher.**
 
