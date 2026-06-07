@@ -64,6 +64,20 @@ Students practice:
 
 ---
 
+## 🆘 Getting Help
+
+### Safety Notes for Kids
+
+- Do not post personal info (full name, address, school, phone, email)
+- Use a parent/guardian account when required
+- Ask an adult before making anything public
+- Keep comments and game text kind and respectful
+
+Important Note for Students:  
+Always follow your family’s rules and expectations when using the internet. If you’re unsure whether a website is okay to use, check with a parent or guardian first.
+
+---
+
 ## 🌍 Publishing (Safe + Free First)
 
 **Always publish with parent/guardian or teacher help.**
@@ -92,15 +106,6 @@ Students practice:
 - **Hostinger basic shared plans** (budget)
 
 If publishing is not allowed yet, students can still share by running locally on a family computer.
-
----
-
-## 🆘 Safety Notes for Kids
-
-- Do not post personal info (full name, address, school, phone, email)
-- Use a parent/guardian account when required
-- Ask an adult before making anything public
-- Keep comments and game text kind and respectful
 
 ---
 
