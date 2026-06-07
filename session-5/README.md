@@ -40,12 +40,15 @@ In this session, students will:
 
 ## 📁 Files in This Folder
 
-Session 5 uses **four files**:
+Session 5 uses these files:
 
 - `index.html` → Layout + HUD + inventory sections
 - `style.css` → Final visual polish
-- `story.js` → Story routes, endings, and battle nodes
-- `script.js` → Engine logic (state, battle, equipment, endings)
+- `story.js` → Story routes, endings, and branching rules
+- `script.js` → Engine logic (state, combat, routing, inventory)
+- `items.json` → Item catalog (types, descriptions, ownership defaults)
+- `adversaries.json` → Enemy pools and reward ranges
+- `ADAPTING.MD` → Guide for reusing this baseline for new stories
 
 ---
 
