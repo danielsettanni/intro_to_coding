@@ -215,6 +215,32 @@ forest: {
 
 This project can be published for free using GitHub Pages, allowing students to share their game with friends and family.
 
+### 🌍 Publish with GitHub Pages (Free)
+
+> Do this with a parent/guardian or teacher.
+
+1. Create a GitHub account (or use an approved account).
+2. Create a new repository and upload your project files.
+3. Make sure your game files are in the repository (at minimum: `index.html`, `style.css`, `script.js`, `story.js`).
+4. In GitHub, open your repository:
+   - Go to **Settings** → **Pages**
+   - Under **Build and deployment**, set:
+     - **Source:** Deploy from a branch
+     - **Branch:** `main` (or `master`)
+     - **Folder:** `/ (root)`
+5. Click **Save**.
+6. Wait 1–3 minutes, then refresh the Pages settings.
+7. Open the published URL GitHub provides.
+
+✅ Tip: If you are publishing a specific session, upload only that session’s files at repo root, or use a dedicated repository for that session.
+
+### 🛠 If it doesn’t work
+
+- Confirm `index.html` is named exactly `index.html`
+- Confirm file names and capitalization match exactly
+- Wait a minute and refresh (first deploy can take a moment)
+- Check repository is public (or GitHub plan supports private Pages)
+
 ---
 
 ## 🎓 About the Class
