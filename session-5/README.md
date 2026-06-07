@@ -15,6 +15,17 @@ By the end of this session, students will have a complete adventure game they ca
 
 ---
 
+## 📘 Build Your Own Version
+
+Want to create your own story using this project as a baseline?
+
+See **[ADAPTING.MD](./ADAPTING.MD)** for a step-by-step guide to:
+- Reusing `index.html`, `script.js`, and `style.css`
+- Customizing `story.js`, `items.json`, and `adversaries.json`
+- Safely extending the engine later
+
+---
+
 ## 🎯 What Students Will Do in Session 5
 
 In this session, students will:

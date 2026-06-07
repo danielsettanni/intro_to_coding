@@ -61,6 +61,70 @@ myNode: {
 - `checkItem`, `targetIfHasItem`, `targetIfMissingItem`
 - `resetGame`
 
+### Story data attribute guide (what + interaction effect)
+
+> Note: This project stores story data in `story.js` as a JSON-like object.
+
+- `text`
+  - **What it is:** Story content shown to the player for a node.
+  - **Interaction effect:** Changing this changes what the player reads in that moment.
+
+- `choices`
+  - **What it is:** Array of button options for that node.
+  - **Interaction effect:** Controls what actions/paths are available next.
+
+- `target`
+  - **What it is:** The next node id for a choice.
+  - **Interaction effect:** Changes where a click sends the player.
+
+- `requiredItem`
+  - **What it is:** Item name required before a choice can proceed.
+  - **Interaction effect:** If missing, the player is redirected (usually via `missingTarget`).
+
+- `missingTarget`
+  - **What it is:** Node to show when `requiredItem` is not met.
+  - **Interaction effect:** Lets you provide helpful “you need X first” guidance.
+
+- `requiredFlag`
+  - **What it is:** Boolean progress condition required for a choice.
+  - **Interaction effect:** Locks routes until story milestones happen.
+
+- `missingFlagTarget`
+  - **What it is:** Fallback node when `requiredFlag` is false.
+  - **Interaction effect:** Gives context for why that option is not available yet.
+
+- `giveItem` / `giveWeapon` / `giveArmor`
+  - **What it is:** Grants an item/equipment on click.
+  - **Interaction effect:** Updates inventory and can unlock future choices.
+
+- `consumeItems`
+  - **What it is:** Array of item names removed on click.
+  - **Interaction effect:** Supports trades/crafting/cost mechanics.
+
+- `setFlag`
+  - **What it is:** Sets a progress flag in game state.
+  - **Interaction effect:** Unlocks future story branches tied to that flag.
+
+- `spendRupees`
+  - **What it is:** Currency cost for a choice.
+  - **Interaction effect:** Prevents purchase/action when the player has too few rupees.
+
+- `checkItem`
+  - **What it is:** Item name to test for conditional branching.
+  - **Interaction effect:** Lets one button route differently based on inventory.
+
+- `targetIfHasItem`
+  - **What it is:** Alternate target used when `checkItem` is owned.
+  - **Interaction effect:** Example: “chest is empty” if player already took item.
+
+- `targetIfMissingItem`
+  - **What it is:** Alternate target used when `checkItem` is not owned.
+  - **Interaction effect:** Lets a single button handle both states clearly.
+
+- `resetGame`
+  - **What it is:** Resets state to a fresh run.
+  - **Interaction effect:** Useful for ending nodes and replay buttons.
+
 ---
 
 ## 3) Battle Nodes in `story.js`
@@ -93,6 +157,31 @@ If your story uses `giveItem: "magic key"`, add `"magic key"` to `items.json`.
 
 Keep naming exact (capitalization and spaces matter).
 
+### `items.json` attribute guide (what + interaction effect)
+
+For each item entry, this baseline uses:
+
+- `category`
+  - **What it is:** Which inventory group the item belongs to (`general`, `weapon`, `armor`).
+  - **Interaction effect:** Controls where players expect to see/use the item and how script logic treats it.
+
+- `description`
+  - **What it is:** Human-readable explanation of the item.
+  - **Interaction effect:** Used in feedback text (for example duplicate-pickup messages), helping players understand what they already have.
+
+- `owned`
+  - **What it is:** Starting ownership state (usually `false`).
+  - **Interaction effect:** Used as baseline state for tracking whether the player has already collected/traded for an item.
+
+Example:
+```json
+"lantern": {
+  "category": "general",
+  "description": "a sturdy lantern",
+  "owned": false
+}
+```
+
 ---
 
 ## 5) Updating `adversaries.json`
@@ -110,6 +199,30 @@ Each enemy should include:
 - `backstory`
 - `strengthClassification`
 - `rewardRupeesRange`
+
+### `adversaries.json` attribute guide (what + interaction effect)
+
+For each adversary entry:
+
+- `name`
+  - **What it is:** Enemy display name.
+  - **Interaction effect:** Shown in battle text and backstory view.
+
+- `hitPoints`
+  - **What it is:** Base enemy HP.
+  - **Interaction effect:** Higher HP means longer battles and more risk to player HP.
+
+- `backstory`
+  - **What it is:** Short flavor/lore text.
+  - **Interaction effect:** Displayed when player clicks “View more about the enemy.”
+
+- `strengthClassification`
+  - **What it is:** Enemy tier (`weak`, `average`, `strong`).
+  - **Interaction effect:** Determines which random pool the engine draws from and affects expected encounter difficulty.
+
+- `rewardRupeesRange`
+  - **What it is:** `[min, max]` rupee reward for winning.
+  - **Interaction effect:** Changes progression speed for blacksmith/shop purchases.
 
 Example:
 ```json
