@@ -141,11 +141,11 @@ Learning to code is a journey. These resources are here to help you learn safely
 Each session builds on the previous one.  
 An example version of the project for **each session** can be found in folders named:
 
-- `session-1/`
-- `session-2/`
-- `session-3/`
-- `session-4/`
-- `session-5/`
+- [`session-1/`](./session-1/)
+- [`session-2/`](./session-2/)
+- [`session-3/`](./session-3/)
+- [`session-4/`](./session-4/)
+- [`session-5/`](./session-5/)
 
 Each folder contains a complete, working version of the game as it exists at the end of that session.
 
