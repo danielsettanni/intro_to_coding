@@ -736,6 +736,34 @@ Paste this:
       "backstory": "A hungry tunnel scavenger that guards shiny scraps.",
       "strengthClassification": "weak",
       "rewardRupeesRange": [10, 20]
+    },
+    {
+      "name": "Dust Imp",
+      "hitPoints": 11,
+      "backstory": "A prankster spirit that throws gravel from hidden ledges.",
+      "strengthClassification": "weak",
+      "rewardRupeesRange": [10, 20]
+    },
+    {
+      "name": "Tunnel Crawler",
+      "hitPoints": 13,
+      "backstory": "A skittering beast drawn to lantern light.",
+      "strengthClassification": "weak",
+      "rewardRupeesRange": [10, 20]
+    },
+    {
+      "name": "Broken Pick Bandit",
+      "hitPoints": 12,
+      "backstory": "A failed thief still searching for one lucky haul.",
+      "strengthClassification": "weak",
+      "rewardRupeesRange": [10, 20]
+    },
+    {
+      "name": "Moss Goblin",
+      "hitPoints": 10,
+      "backstory": "A small goblin that hides in damp cracks of the mine.",
+      "strengthClassification": "weak",
+      "rewardRupeesRange": [10, 20]
     }
   ],
   "average": [
@@ -745,6 +773,34 @@ Paste this:
       "backstory": "A seasoned outlaw who controls old side tunnels.",
       "strengthClassification": "average",
       "rewardRupeesRange": [15, 25]
+    },
+    {
+      "name": "Stonefang Hyena",
+      "hitPoints": 20,
+      "backstory": "A predator that learned to hunt by echo and vibration.",
+      "strengthClassification": "average",
+      "rewardRupeesRange": [15, 25]
+    },
+    {
+      "name": "Lanternless Miner",
+      "hitPoints": 20,
+      "backstory": "A cursed miner roaming in darkness for lost wages.",
+      "strengthClassification": "average",
+      "rewardRupeesRange": [15, 25]
+    },
+    {
+      "name": "Slate Sentinel",
+      "hitPoints": 20,
+      "backstory": "An old mine guardian automaton still following orders.",
+      "strengthClassification": "average",
+      "rewardRupeesRange": [15, 25]
+    },
+    {
+      "name": "Ridgeback Boar",
+      "hitPoints": 20,
+      "backstory": "A territorial beast that charges at any intruder.",
+      "strengthClassification": "average",
+      "rewardRupeesRange": [15, 25]
     }
   ],
   "strong": [
@@ -752,6 +808,34 @@ Paste this:
       "name": "Obsidian Brute",
       "hitPoints": 28,
       "backstory": "A hulking cave warrior clad in obsidian shards.",
+      "strengthClassification": "strong",
+      "rewardRupeesRange": [20, 35]
+    },
+    {
+      "name": "Deep Delver Warlord",
+      "hitPoints": 30,
+      "backstory": "Commander of the lower tunnels, feared by all miners.",
+      "strengthClassification": "strong",
+      "rewardRupeesRange": [20, 35]
+    },
+    {
+      "name": "Crystal Basilisk",
+      "hitPoints": 29,
+      "backstory": "A reptile infused with gem dust and cave magic.",
+      "strengthClassification": "strong",
+      "rewardRupeesRange": [20, 35]
+    },
+    {
+      "name": "Gloom Knight",
+      "hitPoints": 31,
+      "backstory": "A forgotten knight bound to guard the mine vault.",
+      "strengthClassification": "strong",
+      "rewardRupeesRange": [20, 35]
+    },
+    {
+      "name": "Titan Mole",
+      "hitPoints": 32,
+      "backstory": "A massive burrower that tears through ore veins.",
       "strengthClassification": "strong",
       "rewardRupeesRange": [20, 35]
     }
