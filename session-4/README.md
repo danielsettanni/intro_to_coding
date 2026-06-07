@@ -24,6 +24,8 @@ In this session, students will:
 - Update the engine to swap images automatically as the story changes
 - Improve the game’s visual style (color, spacing, button states, transitions)
 - Use atmosphere to make different scenes feel different (safe, tense, mysterious)
+- Build a branching clue path (find a code in one scene, use it in another)
+- Add code-locked choices with success/failure outcomes
 
 Students will leave with a game that is both **interactive** and **visually expressive**.
 
@@ -74,21 +76,6 @@ Each story node can define:
 
 ---
 
-## 🧩 What Is an SVG? (Basic)
-
-An **SVG** is an image format based on text instructions (shapes, lines, colors), not a fixed pixel grid.
-
-- **SVG** = vector image (text-based instructions)
-- **PNG/JPG** = raster image (pixels stored as binary image data)
-
-Simple difference:
-- SVG stays sharp when resized
-- PNG/JPG can get blurry or pixelated when stretched
-
-For this session, SVG files are useful as lightweight, editable placeholder scene art.
-
----
-
 ## ✍️ Customizing Atmosphere
 
 Most updates happen in:
@@ -96,6 +83,12 @@ Most updates happen in:
 - **`story.js`** for scene data (`text`, `choices`, `image`, `mood`)
 - **`style.css`** for visual tone and polish
 - **`script.js`** for applying mood classes and image updates
+
+You can also add puzzle behavior in `story.js` choices:
+
+- `requiredItem` → hide/lock choices unless item is owned
+- `code` + `codePrompt` → ask the player for input
+- `codeSuccessTarget` / `codeFailTarget` → route to different story outcomes
 
 Example node fields:
 
@@ -122,6 +115,8 @@ This session introduces:
 - UI polish as part of game design
 - Data-driven atmosphere (`mood` values in story nodes)
 - Separating **content** (story data) from **presentation** (CSS themes)
+- Branch-based puzzle design (clue node → locked interaction node)
+- Input validation and outcome routing (correct/incorrect code paths)
 
 ---
 

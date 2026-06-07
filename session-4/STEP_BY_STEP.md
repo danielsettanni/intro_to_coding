@@ -51,6 +51,12 @@ Keeps Session 4 separate and organized.
 **What this does for you:**  
 Builds the game layout, including a place for scene images.
 
+Also important for later steps:
+- `id="sceneImage"` lets JavaScript swap scene art
+- `id="storyText"` shows current story node text
+- `id="choices"` is where buttons are generated dynamically
+- `id="inventory"` and `id="debug"` provide player + debugging feedback
+
 1. Create a file named:
 
    `index.html`
@@ -210,7 +216,25 @@ You should see: a styled game card and color mood in the page background.
 ## 📖 Step 3 — Create `story.js` (Story + Image + Mood Data)
 
 **What this does for you:**  
-Stores scene text, choices, inventory behavior, image path, mood per node, and now a code-locked safe with a clue you must discover.
+Stores scene text, choices, inventory behavior, image path, mood per node, and a code-locked safe puzzle flow.
+
+### Key story-node fields used in this version
+
+- `text` → story shown on screen
+- `image` → scene file path
+- `mood` → page theme (`calm`, `mystery`, `danger`)
+- `choices` → button definitions
+- `requiredItem` → only show this choice if item is in inventory
+- `giveItem` → add item when choice is selected
+- `code` + `codePrompt` → prompt for input
+- `codeSuccessTarget` / `codeFailTarget` → branch to explicit outcome nodes
+
+### Key puzzle branch nodes in this version
+
+- `stairLanding` → clue discovery node (`4281`)
+- `safe` → code entry interaction
+- `safeOpened` → success outcome
+- `safeLocked` → fail outcome
 
 1. Create a file named:
 
@@ -355,7 +379,23 @@ You should still see loading text until the engine reads this file in the next s
 ## ⚙️ Step 4 — Create `script.js` (Render Text, Choices, Image, and Mood)
 
 **What this does for you:**  
-Runs the game, tracks inventory, swaps scene images, applies mood classes, and supports code-locked choices.
+Runs the game, tracks inventory, swaps scene images, applies mood classes, and supports code-locked choice branching.
+
+### Core functions in this script
+
+- `hasItem(itemName)` → inventory check
+- `addItem(itemName)` → safe item insert (no duplicates)
+- `renderInventory()` → updates inventory line
+- `applyMood(mood)` → updates body class for theme colors
+- `goToNode(nodeId)` → central render function for story + buttons
+
+### Code-entry logic behavior
+
+Inside the button click handler:
+
+- If a choice has `code`, prompt user for input
+- If wrong, route to `codeFailTarget` (or stay on current node)
+- If correct, apply `giveItem` (if present) and route to `codeSuccessTarget`
 
 1. Create a file named:
 
@@ -449,6 +489,7 @@ function goToNode(nodeId) {
   });
 
   renderInventory();
+  debugEl.textContent = `Current page: ${nodeId}`;
 }
 
 goToNode("start");

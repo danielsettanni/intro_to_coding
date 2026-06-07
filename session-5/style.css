@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #dbeafe, #eef2ff);
+  display: flex;
+  justify-content: center;
+  padding: 24px 12px;
+}
+
+#game {
+  width: 760px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  margin-top: 0;
+}
+
+#hud {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+#hud span {
+  background: #111827;
+  color: #fff;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+#storyText {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+#choices {
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #fff;
+  padding: 11px 12px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.05);
+}
+
+#inventoryGrid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.invBox {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.invBox h3 {
+  margin: 0 0 6px;
+  font-size: 14px;
+}
+
+.invBox p {
+  margin: 0;
+  font-size: 14px;
+  color: #334155;
+}
+
+.status {
+  margin-top: 14px;
+  font-style: italic;
+  opacity: 0.8;
+}

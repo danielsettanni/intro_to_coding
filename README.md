@@ -141,11 +141,11 @@ Learning to code is a journey. These resources are here to help you learn safely
 Each session builds on the previous one.  
 An example version of the project for **each session** can be found in folders named:
 
-session-1/
-session-2/
-session-3/
-session-4/
-session-5/
+- `session-1/`
+- `session-2/`
+- `session-3/`
+- `session-4/`
+- `session-5/`
 
 Each folder contains a complete, working version of the game as it exists at the end of that session.
 
@@ -165,11 +165,11 @@ Students can explore earlier sessions to review concepts or compare progress ove
 
 Each session folder typically includes:
 
-index.html    # Main webpage
-style.css     # Styling and layout
-story.js      # Story content (pages and choices)
-script.js     # Game logic and engine
-assets/       # Images and sounds (optional)
+- `index.html`    # Main webpage
+- `style.css`     # Styling and layout
+- `story.js`      # Story content (pages and choices)
+- `script.js`     # Game logic and engine
+- `assets/`       # Images and sounds (optional)
 
 ---
 
@@ -209,20 +209,20 @@ forest: {
 }
 ```
 
-⸻
+---
 
-🚀 Sharing Your Game
+## 🚀 Sharing Your Game
 
 This project can be published for free using GitHub Pages, allowing students to share their game with friends and family.
 
-⸻
+---
 
-🎓 About the Class
+## 🎓 About the Class
 
-Intro to Coding teaches programming through creativity and storytelling.
+Intro to Coding teaches programming through creativity and storytelling.  
 Students don’t just learn code — they build something meaningful and fun.
 
-⸻
+---
 
 Enjoy building your adventure!
 

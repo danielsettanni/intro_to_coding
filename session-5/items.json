@@ -1,0 +1,47 @@
+{
+  "lantern": {
+    "category": "general",
+    "description": "a sturdy lantern",
+    "owned": false
+  },
+  "apples": {
+    "category": "general",
+    "description": "a basket of ripe apples",
+    "owned": false
+  },
+  "gift basket": {
+    "category": "general",
+    "description": "Grandma's gift basket",
+    "owned": false
+  },
+  "rope": {
+    "category": "general",
+    "description": "a sturdy rope",
+    "owned": false
+  },
+  "climbing pick": {
+    "category": "general",
+    "description": "a climbing pick",
+    "owned": false
+  },
+  "sword": {
+    "category": "weapon",
+    "description": "a sword (attack x2)",
+    "owned": false
+  },
+  "bow": {
+    "category": "weapon",
+    "description": "a bow (attack x2)",
+    "owned": false
+  },
+  "simple armor": {
+    "category": "armor",
+    "description": "simple armor (defense x1.5)",
+    "owned": false
+  },
+  "chain armor": {
+    "category": "armor",
+    "description": "chain armor (defense x2)",
+    "owned": false
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Choose Your Own Adventure (Session 5)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game">
+    <h1>Roads to Grandma's House</h1>
+
+    <div id="hud">
+      <span id="hpBadge">HP: 20 / 20</span>
+      <span id="attackBadge">Attack x1</span>
+      <span id="defenseBadge">Defense x1</span>
+    </div>
+
+    <p id="storyText">Loading story...</p>
+    <div id="choices"></div>
+
+    <div id="inventoryGrid">
+      <div class="invBox">
+        <h3>General Inventory</h3>
+        <p id="generalInventory">(empty)</p>
+      </div>
+      <div class="invBox">
+        <h3>Weapons</h3>
+        <p id="weaponInventory">(none)</p>
+      </div>
+      <div class="invBox">
+        <h3>Defense</h3>
+        <p id="armorInventory">(none)</p>
+      </div>
+    </div>
+
+    <p id="statusText" class="status"></p>
+  </div>
+
+  <script src="story.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

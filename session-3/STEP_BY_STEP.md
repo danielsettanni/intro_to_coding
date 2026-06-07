@@ -49,28 +49,36 @@ Creates the screen for your game, including a place for the story, the buttons, 
    ```html
    <!DOCTYPE html>
    <html lang="en">
-   <head>
-     <meta charset="UTF-8" />
-     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <title>Choose Your Own Adventure (Session 3)</title>
-     <link rel="stylesheet" href="style.css" />
-   </head>
+     <head>
+       <meta charset="UTF-8" />
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <title>Choose Your Own Adventure (Session 3)</title>
+       <link rel="stylesheet" href="style.css" />
+     </head>
 
-   <body>
-     <div id="game">
-       <h1>Castle Escape</h1>
+     <body>
+       <div id="game">
+         <h1 id="title">Lost in the Forest</h1>
 
-       <p id="storyText">Loading story...</p>
+         <!-- Story text -->
+         <p id="storyText"></p>
 
-       <div id="choices"></div>
+         <!-- Inventory display (new in Session 3) -->
+         <div id="inventoryBox">
+           <strong>Inventory:</strong>
+           <span id="inventoryText">none</span>
+         </div>
 
-       <p id="inventory" class="status">Inventory: (empty)</p>
-       <p id="debug" class="status"></p>
-     </div>
+         <!-- Choice buttons get generated here -->
+         <div id="choices"></div>
 
-     <script src="story.js"></script>
-     <script src="script.js"></script>
-   </body>
+         <!-- Debug / status line -->
+         <p id="statusText" class="status"></p>
+       </div>
+
+       <script src="story.js"></script>
+       <script src="script.js"></script>
+     </body>
    </html>
    ```
 
@@ -93,7 +101,7 @@ Makes your story look clean and easy to read, with space for buttons and status 
    ```css
    body {
      font-family: Arial, sans-serif;
-     background: #eef2f7;
+     background: #f2f2f2;
      display: flex;
      justify-content: center;
      padding-top: 40px;
@@ -101,7 +109,7 @@ Makes your story look clean and easy to read, with space for buttons and status 
 
    #game {
      background: white;
-     width: 580px;
+     width: 600px;
      padding: 20px 24px;
      border-radius: 10px;
      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
@@ -111,6 +119,13 @@ Makes your story look clean and easy to read, with space for buttons and status 
      font-size: 18px;
      line-height: 1.5;
      margin-top: 10px;
+   }
+
+   #inventoryBox {
+     margin-top: 14px;
+     padding: 10px 12px;
+     border-radius: 8px;
+     background: #f7f7f7;
    }
 
    #choices {
@@ -129,7 +144,7 @@ Makes your story look clean and easy to read, with space for buttons and status 
    .status {
      margin-top: 14px;
      font-style: italic;
-     opacity: 0.8;
+     opacity: 0.75;
    }
    ```
 
@@ -150,61 +165,112 @@ Stores your story in a data file and adds simple item rules so some choices can 
 2. Paste this code:
 
    ```javascript
+   // SESSION 3 STORY DATA
+   // New concepts:
+   // - choices can have "requires": itemName (only show if you have it)
+   // - choices can have "addItem": itemName (adds to inventory when clicked)
+   // - choices can have "removeItem": itemName (optional; shows consequences)
+
    const STORY = {
      start: {
        text:
-         "You wake up inside a locked castle tower.\n\n" +
-         "A wooden door blocks the stairs. On a table, you spot a small silver key.",
+         "You wake up in a forest clearing. The air is cold, and you don't remember how you got here.\n\n" +
+         "A narrow trail leads north. A cave entrance yawns open to the east.",
        choices: [
-         { text: "Pick up the silver key", target: "start", giveItem: "silver key" },
-         { text: "Try the tower door", target: "towerDoor", requiredItem: "silver key" },
-         { text: "Look out the window", target: "window" }
+         { text: "Follow the trail", target: "trail" },
+         { text: "Enter the cave", target: "caveEntrance" }
        ]
      },
 
-     window: {
+     trail: {
        text:
-         "You look out the narrow window.\n\n" +
-         "Far below, you see the castle courtyard and a gate leading outside.",
+         "The trail winds through tall trees and opens into a quiet village.\n\n" +
+         "A wooden gate blocks the path forward. A sign reads: 'NO ENTRY WITHOUT A PASS.'",
        choices: [
-         { text: "Step away from the window", target: "start" }
+         { text: "Go back to the clearing", target: "start" },
+
+         // This choice only appears if the player has "silverCoin"
+         { text: "Show the silver coin as a pass", target: "villageSquare", requires: "silverCoin" },
+
+         // If they don't have it, we give them a hint
+         { text: "Try to open the gate anyway", target: "gateLocked" }
        ]
      },
 
-     towerDoor: {
+     gateLocked: {
        text:
-         "The silver key fits. The tower door unlocks with a click.\n\n" +
-         "A staircase leads down to the castle courtyard.",
+         "You tug on the gate, but it doesn't budge.\n\n" +
+         "The lock looks old. Maybe there's a way to prove you belong here...",
        choices: [
-         { text: "Go down to the courtyard", target: "courtyard" }
+         { text: "Go back", target: "trail" }
        ]
      },
 
-     courtyard: {
+     caveEntrance: {
        text:
-         "You enter the courtyard. An iron gate blocks the exit.\n\n" +
-         "A guard's bench sits nearby, and something gold glints underneath it.",
+         "The cave is dark and damp. Water drips from the ceiling.\n\n" +
+         "Something glints faintly on the ground near your feet.",
        choices: [
-         { text: "Look under the bench", target: "bench" },
-         { text: "Try the gate", target: "gate", requiredItem: "gold key" }
+         // Add an item when clicked
+         { text: "Pick up the shiny object", target: "foundCoin", addItem: "silverCoin" },
+         { text: "Leave the cave", target: "start" }
        ]
      },
 
-     bench: {
+     foundCoin: {
        text:
-         "Under the bench, you find a gold key.\n\n" +
-         "This might open the main gate.",
+         "You pick up the object. It's a small silver coin with a symbol you've never seen.\n\n" +
+         "It feels warm in your hand for a moment, then goes cold.",
        choices: [
-         { text: "Take the gold key", target: "courtyard", giveItem: "gold key" }
+         { text: "Go back outside", target: "start" }
        ]
      },
 
-     gate: {
+     villageSquare: {
        text:
-         "The gold key unlocks the gate.\n\n" +
-         "You step outside into the fresh air. You escaped!",
+         "The guard sees the coin and steps aside.\n\n" +
+         "You enter the village square. In the center is a locked chest with a note: 'FOR THE COIN-BEARER.'",
        choices: [
-         { text: "Play again", target: "start" }
+         { text: "Inspect the chest", target: "chest" },
+         { text: "Return to the forest", target: "start" }
+       ]
+     },
+
+     chest: {
+       text:
+         "The chest has a small keyhole.\n\n" +
+         "A shopkeeper whispers: 'Keys are traded for stories.'",
+       choices: [
+         { text: "Tell a short story to the shopkeeper", target: "earnedKey", addItem: "rustyKey" },
+         { text: "Back away from the chest", target: "villageSquare" }
+       ]
+     },
+
+     earnedKey: {
+       text:
+         "The shopkeeper smiles. 'A fair trade.'\n\n" +
+         "They hand you a rusty key.",
+       choices: [
+         { text: "Try the key on the chest", target: "openChest", requires: "rustyKey" },
+         { text: "Put the key away for later", target: "villageSquare" }
+       ]
+     },
+
+     openChest: {
+       text:
+         "The rusty key turns with a loud CLICK.\n\n" +
+         "Inside the chest is a folded map labeled: 'The Way Home.'",
+       choices: [
+         { text: "Take the map", target: "tookMap", addItem: "map" }
+       ]
+     },
+
+     tookMap: {
+       text:
+         "You tuck the map safely away.\n\n" +
+         "Now you have a destination… and a choice to make.",
+       choices: [
+         { text: "Head back into the forest", target: "start" }
        ]
      }
    };
@@ -228,49 +294,60 @@ Makes the story run, remembers items, updates the inventory, and hides choices u
 2. Paste this code:
 
    ```javascript
+   // SESSION 3 GAME ENGINE (with state + inventory + conditional choices)
+
    const storyTextEl = document.getElementById("storyText");
    const choicesEl = document.getElementById("choices");
-   const inventoryEl = document.getElementById("inventory");
-   const debugEl = document.getElementById("debug");
+   const statusTextEl = document.getElementById("statusText");
+   const inventoryTextEl = document.getElementById("inventoryText");
 
-   const state = {
+   // Game state = what the game remembers
+   const gameState = {
      inventory: []
    };
 
+   // Helper: check if player has an item
    function hasItem(itemName) {
-     return state.inventory.includes(itemName);
+     return gameState.inventory.includes(itemName);
    }
 
+   // Helper: add item (but don’t add duplicates)
    function addItem(itemName) {
-     if (itemName && !hasItem(itemName)) {
-       state.inventory.push(itemName);
+     if (!hasItem(itemName)) {
+       gameState.inventory.push(itemName);
      }
    }
 
+   // Update inventory display on screen
    function renderInventory() {
-     if (state.inventory.length === 0) {
-       inventoryEl.textContent = "Inventory: (empty)";
-       return;
+     if (gameState.inventory.length === 0) {
+       inventoryTextEl.textContent = "none";
+     } else {
+       inventoryTextEl.textContent = gameState.inventory.join(", ");
      }
-
-     inventoryEl.textContent = `Inventory: ${state.inventory.join(", ")}`;
    }
 
+   // Render one story node by id
    function goToNode(nodeId) {
      const node = STORY[nodeId];
 
      if (!node) {
-       storyTextEl.textContent = "Oops! That part of the story doesn't exist yet.";
+       storyTextEl.textContent = "Oops! That story page doesn't exist yet.";
        choicesEl.innerHTML = "";
-       debugEl.textContent = `Missing node: ${nodeId}`;
+       statusTextEl.textContent = `Missing node: ${nodeId}`;
        return;
      }
 
+     // Show story text (convert \n to <br> for line breaks)
      storyTextEl.innerHTML = node.text.replaceAll("\n", "<br>");
+
+     // Clear old choice buttons
      choicesEl.innerHTML = "";
 
+     // Create buttons for choices, but only if requirements are met
      node.choices.forEach((choice) => {
-       if (choice.requiredItem && !hasItem(choice.requiredItem)) {
+       // If a choice requires an item and player doesn't have it, skip it
+       if (choice.requires && !hasItem(choice.requires)) {
          return;
        }
 
@@ -278,20 +355,28 @@ Makes the story run, remembers items, updates the inventory, and hides choices u
        button.textContent = choice.text;
 
        button.onclick = () => {
-         if (choice.giveItem) {
-           addItem(choice.giveItem);
+         // Apply effects (like adding an item) BEFORE moving to next node
+         if (choice.addItem) {
+           addItem(choice.addItem);
          }
 
+         // (Optional: you can add removeItem later)
+         // if (choice.removeItem) { ... }
+
+         // Refresh inventory display, then go to the next story page
+         renderInventory();
          goToNode(choice.target);
        };
 
        choicesEl.appendChild(button);
      });
 
-     renderInventory();
-     debugEl.textContent = `Current page: ${nodeId}`;
+     // Update status line
+     statusTextEl.textContent = `Current page: ${nodeId}`;
    }
 
+   // Start
+   renderInventory();
    goToNode("start");
    ```
 
