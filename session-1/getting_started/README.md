@@ -1,20 +1,23 @@
-# GETTING_STARTED.md  
+# GETTING_STARTED.md
 
-## Your First Web Page (3 Tiny Versions)
+## Optional Warm-Up: Your First Web Page (3 Tiny Versions)
 
-In this project, you’ll build a *super simple* webpage three times. Each version adds one new idea:
+> 🧭 **When to use this:** before Session 1 (or as a 10-minute warm-up at the start of it) if you've never seen HTML before. Returning students can skip it.
+> Each version is already saved in this folder (`getting_started_v1.html`, `v2`, `v3`). Double-click any of them to see it.
+
+In this warm-up, you’ll build a *super simple* webpage three times. Each version adds one new idea:
 
 1) **HTML**: structure (what’s on the page)  
 2) **CSS**: style (how it looks)  
 3) **JavaScript**: behavior (what it does when you interact)
 
-You can copy each version into a in a file (a suggested name is in the heading) and open it in your browser (or use VS Code + Live Server).
+You can copy each version into a file (a suggested name is in the heading) and open it in your browser (or use VS Code + Live Server).
 
 ---
 
 ## Version 1 — The smallest possible web page
 
-## V1 Code (copy into `session-1/getting_started_v1.html`)
+## V1 Code (copy into `getting_started_v1.html`)
 
 ```html
 <!DOCTYPE html>
@@ -97,7 +100,7 @@ In this version, you’ll add inline CSS to:
   •  change the div box background color
   •  change the color of the word world
 
-## V2 Code (copy into session-1/getting_started_v2.html)
+## V2 Code (copy into getting_started_v2.html)
 
 ```html
 <!DOCTYPE html>
@@ -188,7 +191,7 @@ Now we’ll add:
   •  an id on the button (so JavaScript can find it)
   •  a small JavaScript program that changes the button text when clicked
 
-## V3 Code (copy into session-1/getting_started_v3.html)
+## V3 Code (copy into getting_started_v3.html)
 
 ```html
 <!DOCTYPE html>

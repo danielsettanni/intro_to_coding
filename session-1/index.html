@@ -1,44 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- The <head> has information ABOUT the page (not the visible story text). -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- The text that appears in the browser tab -->
-    <title>Choose Your Own Adventure</title>
-
-    <!-- Connect our CSS file so we can make it look nicer -->
+    <title>Pinehill Quest</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <!-- A "container" div keeps our game area organized -->
     <div id="game">
-      <!-- Big heading -->
-      <h1>Choose Your Own Adventure</h1>
+      <h1>Pinehill Quest</h1>
 
-      <!-- This <p> is where our story text will appear -->
-      <!-- The id="storyText" lets JavaScript find this element later -->
-      <p id="storyText">
-        You are walking home as the sun begins to set. The road splits into two
-        paths. One looks dark and quiet. The other is bright and full of strange sounds.
-      </p>
-
-      <!-- Optional: show the last choice the player clicked -->
-      <p id="statusText" class="status">
-        Make a choice to begin...
-      </p>
-
-      <!-- Buttons go here -->
-      <div id="choices">
-        <!-- Each button has an id so JavaScript can attach click behavior -->
-        <button id="choiceDark">Take the dark path</button>
-        <button id="choiceBright">Take the bright path</button>
+      <!-- The HUD ("heads-up display") shows the hero's stats -->
+      <div id="hud">
+        <span id="hearts">❤️❤️❤️❤️❤️</span>
+        <span id="gems">💎 0</span>
       </div>
+
+      <!-- The map: 6 rows of 6 tiles -->
+      <div id="board">
+        <!-- Row 1 -->
+        <div class="tile">🌲</div>
+        <div class="tile">🌲</div>
+        <div class="tile">🌲</div>
+        <div class="tile">🌲</div>
+        <div class="tile">🌲</div>
+        <div class="tile">🌲</div>
+        <!-- Row 2 -->
+        <div class="tile">🌲</div>
+        <div class="tile">🧝</div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile" id="chest">📦</div>
+        <div class="tile">🌲</div>
+        <!-- Row 3 -->
+        <div class="tile">🌲</div>
+        <div class="tile"></div>
+        <div class="tile">🧙</div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile">🌲</div>
+        <!-- Row 4 -->
+        <div class="tile">🌲</div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile">🏪</div>
+        <div class="tile">🌲</div>
+        <!-- Row 5 -->
+        <div class="tile">🌲</div>
+        <div class="tile">🌊</div>
+        <div class="tile">🌊</div>
+        <div class="tile"></div>
+        <div class="tile">🏠</div>
+        <div class="tile">🌲</div>
+        <!-- Row 6 -->
+        <div class="tile">🌲</div>
+        <div class="tile">🌲</div>
+        <div class="tile">🌲</div>
+        <div class="tile">🌲</div>
+        <div class="tile">🌲</div>
+        <div class="tile">🌲</div>
+      </div>
+
+      <p id="message">Click the treasure chest!</p>
     </div>
 
-    <!-- Load our JavaScript at the END so the page loads first -->
-    <script src="script.js"></script>
+    <!-- Load JavaScript last, so the page is ready first -->
+    <script src="game.js"></script>
   </body>
 </html>
