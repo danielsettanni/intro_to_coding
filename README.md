@@ -151,7 +151,7 @@ Each session builds on the previous one. Each `session-N/` folder contains the c
 | Session | Title | You build | Key concepts |
 | --- | --- | --- | --- |
 | [1](./session-1/) | Draw Your World | A web page with an emoji map and a clickable treasure chest | HTML tags, ids & classes, CSS grid, click events |
-| 2 *(coming soon)* | Move the Hero | A map drawn from data, and arrow-key movement | Arrays & strings, loops, x/y, keyboard events |
+| [2](./session-2/) | Move the Hero | A map drawn from data, and arrow-key movement | Arrays & strings, loops, x/y, keyboard events |
 | 3 *(coming soon)* | Walls, Treasure, and Keys | Solid tiles, gem collecting, a backpack, a locked gate | if/else, functions with parameters, state |
 | 4 *(coming soon)* | Talk and Trade | A dialogue box, conversations, a shop, and a secret | Objects as data, reusable engines, math, flags |
 | 5 *(coming soon)* | Monsters, Choices, and Endings | Dice battles, a boss with three solutions, three endings, publishing | Random numbers, branching stories, game balance |
@@ -176,7 +176,7 @@ Missed a week? Copy the previous session's folder from this repo and start from 
 
 ## 📦 Story Packs
 
-Pinehill Quest is the story used in the guides, but the engine can tell any story. The `stories/` *(coming soon)* folder has four more, and students pick one in Session 2:
+Pinehill Quest is the story used in the guides, but the engine can tell any story. The [`stories/`](./stories/) folder has four more, and students pick one in Session 2:
 
 | Story | You are... |
 | --- | --- |
@@ -185,7 +185,7 @@ Pinehill Quest is the story used in the guides, but the engine can tell any stor
 | **The Last Lighthouse** | an islander relighting a lighthouse in cursed fog |
 | **The Midnight Heist** | a young detective retaking a museum from thieves |
 
-Every story uses the **same letters for the same roles** (`T` is always a wall, `O` is always the boss), so every step in every guide works for every story. Each story also includes a finished `world.js` for the end of each session, so students can always catch up. See `stories/README.md` *(coming soon)*.
+Every story uses the **same letters for the same roles** (`T` is always a wall, `O` is always the boss), so every step in every guide works for every story. Each story also includes a finished `world.js` for the end of each session, so students can always catch up. See [`stories/README.md`](./stories/README.md).
 
 ---
 
