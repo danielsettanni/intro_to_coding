@@ -153,7 +153,7 @@ Each session builds on the previous one. Each `session-N/` folder contains the c
 | [1](./session-1/) | Draw Your World | A web page with an emoji map and a clickable treasure chest | HTML tags, ids & classes, CSS grid, click events |
 | [2](./session-2/) | Move the Hero | A map drawn from data, and arrow-key movement | Arrays & strings, loops, x/y, keyboard events |
 | [3](./session-3/) | Walls, Treasure, and Keys | Solid tiles, gem collecting, a backpack, a locked gate | if/else, functions with parameters, state |
-| 4 *(coming soon)* | Talk and Trade | A dialogue box, conversations, a shop, and a secret | Objects as data, reusable engines, math, flags |
+| [4](./session-4/) | Talk and Trade | A dialogue box, conversations, a shop, and a secret | Objects as data, reusable engines, math, flags |
 | 5 *(coming soon)* | Monsters, Choices, and Endings | Dice battles, a boss with three solutions, three endings, publishing | Random numbers, branching stories, game balance |
 
 Every session also includes a **DevTools moment**, a **Make It Yours** section, and **⭐ Stretch** goals for returning or speedy students.
